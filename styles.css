@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #203055;
+    display: flex;
+    font-family: 'Comfortaa', cursive;
+    justify-content: center;
+}
+
+.root-container {
+    background: #EDEEF1;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: absolute;
+    top: 42.5%;
+    transform: translateY(-50%);
+}
+
+.display-container {
+    display: flex;
+    flex-direction: column;
+
+    background: #6b778d;
+    cursor: default;
+    font-family: 'Graduate', cursive;
+    font-size: 1.2em;
+    text-align: right;
+    margin-bottom: 3px;
+    padding: 2px 5px 2px 0;
+    width: 223px;
+}
+
+.display {
+    display: flex;
+    justify-content: flex-end;
+    overflow-x: auto;
+}
+
+.keypad-container {
+    display: flex;
+    width: 220px;
+}
+
+.keypad>button {
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Comfortaa', cursive;
+    transition: 0.15s;
+}
+
+.keypad>button:hover {
+    background: #EDEEF1;
+}
+
+.numpad>button:active {
+    background: #ff6768;
+}
+
+.operators>button:active {
+    background: #6b778d;
+}
+
+.numpad {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    background: #ff6768;
+    margin-right: 2px;
+    width: 180px;
+}
+
+.numpad>button {
+    background: #ff6768;
+    height: 55px;
+    width: 55px;
+}
+
+button[value="0"] {
+    width: 62%;
+}
+
+.operators {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #6b778d;
+    width: 40px;
+}
+
+.operators>button {
+    background: #6b778d;
+    font-weight: bold;
+    height: 45px;
+    width: 45px;
+}
+
+footer {
+    background: #EDEEF1;
+    bottom: 0;
+    font-size: 0.9em;
+    left: 0;
+    padding: 10px 0;
+    position: absolute;
+    right: 0;
+    text-align: center
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: gray;
+}
+
+.footer-text {
+    display: none;
+    padding-bottom: 10px;
+}
+
+.fab {
+    color: black;
+}
+
+.fab:hover {
+    color: gray
+}
+
+@media only screen and (min-width : 640px) and (min-height: 600px) {
+    .display-container {
+        height: 70px;
+        width: 268px;
+    }
+
+    .display {
+        align-items: center;
+        font-size: 1.2em;
+        height: 40px;
+    }
+
+    .keypad-container {
+        width: auto;
+        height: auto;
+        border: 1px solid red;
+    }
+
+    .keypad>button {
+        font-size: 1.2em;
+    }
+
+    .numpad {
+        margin-right: 10px;
+        width: 210px;
+    }
+
+    .numpad>button {
+        height: 70px;
+        width: 70px;
+    }
+
+    .operators>button {
+        height: 55px;
+        width: 55px;
+    }
+
+    .footer-text {
+        display: block;
+    }
+}
+
+@media only screen and (min-width : 640px) and (min-height: 900px) {
+    .display-container {
+        height: 100px;
+        width: 378px;
+    }
+
+    .display {
+        align-items: center;
+        font-size: 1.5em;
+        height: 50px;
+    }
+
+    .keypad-container {
+        width: 380px;
+    }
+
+    .keypad>button {
+        font-size: 1.4em;
+    }
+
+    .numpad {
+        margin-right: 20px;
+        width: 300px;
+    }
+
+    .numpad>button {
+        height: 100px;
+        width: 100px;
+    }
+
+    .operators>button {
+        height: 75px;
+        width: 75px;
+    }
+
+    .footer-text {
+        display: block;
+    }
+}
